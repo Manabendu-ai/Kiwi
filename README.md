@@ -1,5 +1,5 @@
 <div align = "center">
-    <img src = "assests/logo.png" width = "20%">    
+    <img src = "assests/logo.png" width = "30%">    
 </div>
 
 A full-stack event management platform built with React, Spring Boot, KeyCloak, Adminer and PostgreSQL that digitizes the complete event ticketing and check-in process.
