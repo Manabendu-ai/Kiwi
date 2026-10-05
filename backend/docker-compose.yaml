@@ -1,11 +1,11 @@
 services:
-  db:
-    image: postgres:latest
-    ports:
-      - "5432:5432"
-    restart: always
-    environment:
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+#  db:
+#    image: postgres:latest
+#    ports:
+#      - "5432:5432"
+#    restart: always
+#    environment:
+#      POSTGRES_PASSWORD: ${DB_PASSWORD}
 
   adminer:
     image: adminer:latest
