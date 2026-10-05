@@ -2,7 +2,9 @@ package riku.kiwi.backend.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -28,4 +30,8 @@ public class User {
     // TODO : Organizing events
     // TODO : Staffing events
     // TODO : Attending events
+
+    @CreatedDate
+    @Column(name = "created_at", updatable = false, nullable = false)
+    private LocalDateTime createdAt;
 }
