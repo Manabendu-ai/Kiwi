@@ -44,5 +44,6 @@ public class Event {
     private EventStatus eventStatus;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "organizer_id")
     private User organizer;
 }
