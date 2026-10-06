@@ -30,7 +30,7 @@ public class User {
     private String email;
 
     @OneToMany(mappedBy = "organizer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private List<Event> events;
+    private List<Event> organizingEvents;
 
     // TODO : Staffing events
     // TODO : Attending events

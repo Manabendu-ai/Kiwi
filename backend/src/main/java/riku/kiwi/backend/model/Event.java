@@ -5,6 +5,8 @@ import lombok.*;
 import riku.kiwi.backend.domain.EventStatus;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -46,4 +48,7 @@ public class Event {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organizer_id")
     private User organizer;
+
+    @ManyToMany(mappedBy = "attendees", fetch = FetchType.LAZY)
+    private List<User> attendees = new ArrayList<>();
 }
