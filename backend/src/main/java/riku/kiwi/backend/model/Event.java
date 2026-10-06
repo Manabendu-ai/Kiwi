@@ -42,4 +42,7 @@ public class Event {
     @Column(name = "event_status", nullable = false)
     @Enumerated(EnumType.STRING)
     private EventStatus eventStatus;
+
+    @ManyToOne
+    private User organizer;
 }
