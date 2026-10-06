@@ -39,6 +39,6 @@ public class Event {
     @Column(name = "sales_end_date")
     private LocalDateTime salesEndDate;
 
-    @Column(name = "event_status", nullable = true)
+    @Column(name = "event_status", nullable = false)
     private EventStatus eventStatus;
 }
