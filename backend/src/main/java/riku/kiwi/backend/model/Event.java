@@ -23,15 +23,21 @@ public class Event {
     @Column(name = "id", nullable = false)
     private UUID id;
 
+    @Column(name = "mame", nullable = false)
     private String name;
 
+    @Column(name = "time", nullable = false)
     private LocalDateTime time;
 
+    @Column(name = "venue", nullable = false)
     private String venue;
 
+    @Column(name = "sales_start_date")
     private LocalDateTime salesStartDate;
 
+    @Column(name = "sales_end_date")
     private LocalDateTime salesEndDate;
 
-    private EventStatus status;
+    @Column(name = "event_status")
+    private EventStatus eventStatus;
 }
