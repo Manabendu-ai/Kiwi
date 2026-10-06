@@ -32,8 +32,9 @@ public class User {
     @OneToMany(mappedBy = "organizer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Event> organizingEvents;
 
-    // TODO : Staffing events
-    // TODO : Attending events
+    @ManyToMany(mappedBy = "attendees", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<Event> attendees;
+
 
     @CreatedDate
     @Column(name = "created_at", updatable = false, nullable = false)
