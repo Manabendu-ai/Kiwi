@@ -33,6 +33,11 @@ public class User {
     private List<Event> organizingEvents;
 
     @ManyToMany(mappedBy = "attendees", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinTable(
+            name = "attendees",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "event_id")
+    )
     private List<Event> attendees;
 
 
