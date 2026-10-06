@@ -40,5 +40,6 @@ public class Event {
     private LocalDateTime salesEndDate;
 
     @Column(name = "event_status", nullable = false)
+    @Enumerated(EnumType.STRING)
     private EventStatus eventStatus;
 }
