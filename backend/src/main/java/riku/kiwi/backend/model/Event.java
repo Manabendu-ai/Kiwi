@@ -2,6 +2,8 @@ package riku.kiwi.backend.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import riku.kiwi.backend.domain.EventStatus;
 
 import java.time.LocalDateTime;
@@ -54,4 +56,12 @@ public class Event {
 
     @ManyToMany(mappedBy = "staffingEvents", fetch = FetchType.LAZY)
     private List<User> staff = new ArrayList<>();
+
+    @CreatedDate
+    @Column(name = "created_at", updatable = false, nullable = false)
+    private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    @Column(name = "updated_at", nullable = false)
+    private LocalDateTime updatedAt;
 }
