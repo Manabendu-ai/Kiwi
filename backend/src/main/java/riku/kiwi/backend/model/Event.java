@@ -5,7 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import riku.kiwi.backend.domain.EventStatus;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -20,4 +22,16 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", nullable = false)
     private UUID id;
+
+    private String name;
+
+    private LocalDateTime time;
+
+    private String venue;
+
+    private LocalDateTime salesStartDate;
+
+    private LocalDateTime salesEndDate;
+
+    private EventStatus status;
 }
