@@ -27,6 +27,9 @@ public class Event {
     @Column(name = "start", nullable = false)
     private LocalDateTime start;
 
+    @Column(name = "end", nullable = false)
+    private LocalDateTime end;
+
     @Column(name = "venue", nullable = false)
     private String venue;
 
