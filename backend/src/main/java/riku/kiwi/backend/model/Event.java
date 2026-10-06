@@ -51,4 +51,7 @@ public class Event {
 
     @ManyToMany(mappedBy = "attendees", fetch = FetchType.LAZY)
     private List<User> attendees = new ArrayList<>();
+
+    @ManyToMany(mappedBy = "staffingEvents", fetch = FetchType.LAZY)
+    private List<User> staff = new ArrayList<>();
 }
