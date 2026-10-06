@@ -7,6 +7,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -28,8 +29,9 @@ public class User {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
+    @OneToMany(mappedBy = "organizer", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Event> events;
 
-    // TODO : Organizing events
     // TODO : Staffing events
     // TODO : Attending events
 
