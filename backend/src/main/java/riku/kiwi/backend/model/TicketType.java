@@ -16,6 +16,9 @@ public class TicketType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(updatable = false)
+    @Column(updatable = false, nullable = false)
     private UUID id;
+
+    @Column(name = "name", nullable = false)
+    private String name;
 }
