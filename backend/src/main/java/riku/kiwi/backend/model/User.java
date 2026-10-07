@@ -48,6 +48,9 @@ public class User {
     )
     private List<Event> staffs;
 
+    @OneToMany(mappedBy = "purchaser", cascade = CascadeType.ALL)
+    private List<Ticket> tickets;
+
 
     @CreatedDate
     @Column(name = "created_at", updatable = false, nullable = false)
