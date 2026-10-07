@@ -5,7 +5,7 @@ import jakarta.persistence.Table;
 import lombok.*;
 
 @Entity
-@Table(name = "ticket_type")
+@Table(name = "ticket_types")
 @Getter
 @Setter
 @NoArgsConstructor
