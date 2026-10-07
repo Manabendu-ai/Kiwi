@@ -1,8 +1,9 @@
 package riku.kiwi.backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.UUID;
 
 @Entity
 @Table(name = "ticket")
@@ -12,4 +13,9 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class Ticket {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id", updatable = false, nullable = false)
+    private UUID id;
 }
