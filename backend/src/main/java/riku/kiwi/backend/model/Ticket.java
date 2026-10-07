@@ -37,10 +37,13 @@ public class Ticket {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private User user;
+    private User purchaser;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ticket_id")
     private TicketType ticketType;
 
+    // TODO : QrCode
+    // TODO : TicketValidation
+    // TODO : TicketSale
 }
